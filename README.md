@@ -1,53 +1,117 @@
-# Wearable Sensor Data: Stress Response & Academic Performance Prediction
+# Wearable Stress Analytics & Performance Prediction Platform 📊⌚
 
-This repository contains the codebase for analyzing wearable physiological sensor data to predict student performance and explore stress responses during high-stakes academic exams.
+**Multimodal wearable sensor analytics platform for modelling stress responses and predicting academic performance using machine learning.**
 
-We have leveraged a real-world dataset collected from university students during their final exams, using multimodal physiological signals such as heart rate, electrodermal activity (EDA), skin temperature, and accelerometer readings.
+This project analyses real-world physiological data collected from university students during high-stakes exams to understand stress behaviour and predict academic outcomes. The system processes multimodal wearable signals — including heart rate, electrodermal activity (EDA), skin temperature, and accelerometer data — and applies advanced feature engineering and machine learning techniques to build reliable predictive models.
 
-## Dataset
+The platform demonstrates end-to-end **data preprocessing, time-series feature engineering, statistical modelling, and analytics pipeline design**, aligned with real-world data analytics and cloud-based workflows.
 
-The original dataset is available at [PhysioNet: Wearable Exam Stress Dataset](https://physionet.org/content/wearable-exam-stress/1.0.0/).
+---
 
-> 📌 **Note:**  
-> The dataset contains multimodal recordings from a real-world academic setting, including motion artifacts and a relatively small participant pool. In the original publication, only electrodermal activity (EDA) was explored with basic machine learning methods. In our work, we extend this to multimodal signals and advanced feature engineering for deeper insights.
+## 🚀 Project Overview
 
-## Project Structure
+The objective of this platform is to explore how physiological stress patterns influence academic performance. By combining signal processing, statistical feature extraction, and machine learning experimentation, the project builds a reproducible analytics workflow for wearable datasets.
 
-- **preprocessing.ipynb**  
-  - Data cleaning and handling missing values with KNN imputer.
-  - Rolling window creation to segment time-series data.
-  - Timestamp windowing to maintain temporal consistency.
-  - Feature extraction: basic (mean, std), statistical (range, entropy, kurtosis), and dimensionality reduction using PCA.
-  - STL decomposition for trend analysis of physiological signals.
-  - Feature selection using correlation-based filtering.
+Key goals:
 
-- **modelling.ipynb**  
-  - Label encoding of student grades.
-  - Leave-One-Student-Out cross-validation (LOSO-CV) to generalize model performance.
-  - Baseline model: Random Forest Classifier.
-  - Model experiments with XGBoost, MLP, SVM, ExtraTrees, Logistic Regression, KNN, and Random Forest.
-  - Evaluation metrics: Accuracy, F1 Score, Precision, Recall (Classification); MAE, RMSE, R² Score (Regression).
-  - Comparative analysis of models and performance visualization.
+- Analyse multimodal physiological signals collected during exams  
+- Predict academic performance using classification and regression models  
+- Investigate stress-response trends through time-series analysis  
+- Build a structured analytics pipeline for wearable sensor data  
 
-## Highlights
+---
 
-- **Multimodal Signal Processing:** Combined heart rate, EDA, temperature, and motion data.
-- **Advanced Feature Engineering:** Trend decomposition (STL), statistical features, PCA for dimensionality reduction.
-- **Robust Modelling:** Applied both classification and regression models to predict performance labels and actual grades.
-- **Rigorous Validation:** Leave-One-Student-Out Cross-Validation ensures model robustness on unseen participants.
-- **Result Insights:** Discussed both high and medium performers' physiological patterns, with meaningful academic stress implications.
+## 📂 Dataset
 
-## Future Directions
+- Source: **PhysioNet – Wearable Exam Stress Dataset**
+- Participants: University students monitored during final exams
+- Signals Included:
+  - Heart Rate
+  - Electrodermal Activity (EDA)
+  - Skin Temperature
+  - Accelerometer Data
 
-- Expand the participant pool for better generalization.
-- Explore deep learning approaches for sequential modelling (e.g., LSTMs, Transformers).
-- Integrate additional contextual data (e.g., self-reported stress levels, environmental factors).
-- Deploy real-time monitoring dashboards for academic stress management.
+📌 **Note:** Dataset access may require PhysioNet credentials and compliance with data usage policies.
 
-## Reference
+---
 
-If you use this work, please consider citing the original dataset publication:
+## 🧱 Project Structure
 
-## License
+### 🔧 `preprocessing.ipynb`
 
-This repository is for academic and research purposes only.
+Data engineering and feature pipeline:
+
+- Missing value handling using KNN Imputer  
+- Rolling window segmentation for time-series modelling  
+- Timestamp windowing for temporal consistency  
+- Feature extraction:
+  - Statistical metrics (mean, std, range, entropy, kurtosis)
+  - STL trend decomposition
+  - PCA for dimensionality reduction
+- Correlation-based feature selection
+
+---
+
+### 🤖 `modelling.ipynb`
+
+Model development and evaluation:
+
+- Label encoding of academic performance  
+- Leave-One-Student-Out Cross-Validation (LOSO-CV) for generalisation  
+- Model experimentation:
+  - Random Forest
+  - XGBoost
+  - MLP
+  - SVM
+  - ExtraTrees
+  - Logistic Regression
+  - KNN
+
+Evaluation metrics:
+
+- Classification: Accuracy, F1 Score, Precision, Recall  
+- Regression: MAE, RMSE, R² Score  
+
+Includes comparative analysis and performance visualisation.
+
+---
+
+## ⭐ Key Highlights
+
+- Multimodal physiological signal processing  
+- Advanced time-series feature engineering and statistical modelling  
+- Robust validation using LOSO-CV methodology  
+- Comparative machine learning experimentation  
+- Insights into academic stress behaviour patterns
+
+---
+
+## 🔮 Future Enhancements
+
+- Sequential deep learning models (LSTM, Transformers)  
+- Real-time stress monitoring dashboards  
+- Integration of contextual behavioural data  
+- Cloud deployment for scalable analytics workflows  
+
+---
+
+## 🌍 Use Cases
+
+- Academic stress monitoring systems  
+- Wearable health analytics research  
+- Behavioural signal modelling  
+- Applied machine learning experimentation
+
+---
+
+## 👤 Author
+
+**Charan Gorentla Ravi**  
+Data Analytics | Cloud Platforms | Python | SQL  
+🔗 https://linkedin.com/in/charan-gr
+
+---
+
+## 📜 License
+
+This repository is intended for academic and research purposes only.
